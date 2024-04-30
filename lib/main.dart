@@ -11,7 +11,7 @@ void main() {
         create: (context) => NotificationsBloc(),
       ),
     ],
-    child: Container(),
+    child: const MainApp(),
   ));
 }
 

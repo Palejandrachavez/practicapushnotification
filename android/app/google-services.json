@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "240390422286",
+    "firebase_url": "https://flutter-84f0f-default-rtdb.firebaseio.com",
+    "project_id": "flutter-84f0f",
+    "storage_bucket": "flutter-84f0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240390422286:android:140a46d3d0b2413bb7a15f",
+        "android_client_info": {
+          "package_name": "com.example.practicapushnotification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2TnmSreGb2PT9-VhKQnOMbIeyrJLxWQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
