@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../notifications/bloc/notifications_bloc.dart';
+import 'package:practicapushnotification/presentation/notifications/bloc/notifications_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -21,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text("hola mundo"),
+        child: Text("HOLI"),
       ),
     );
   }
