@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practicapushnotification/domain/entities/push_message.dart';
 import 'package:practicapushnotification/presentation/notifications/bloc/notifications_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,9 +20,32 @@ class HomeScreen extends StatelessWidget {
               icon: const Icon(Icons.settings))
         ],
       ),
-      body: const Center(
-        child: Text("HOLI"),
-      ),
+      body: const _HomeView(),
     );
+  }
+}
+
+class _HomeView extends StatelessWidget {
+  const _HomeView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final List<PushMessage> notifications =
+        context.watch<NotificationsBloc>().state.notifications;
+
+    return ListView.builder(
+        itemCount: notifications.length,
+        itemBuilder: (BuildContext context, int index) {
+          final notification = notifications[index];
+          return ListTile(
+            title: Text(notification.title),
+            subtitle: Text(notification.body),
+            leading: notification.imageUrl != null
+                ? Image.network(notification.imageUrl!)
+                : null,
+          );
+        });
   }
 }
